@@ -8,14 +8,17 @@ get '/' do
 end
 
 get '/years' do
+  @intro_variable = 'I have been alive for the following years:'
+  @years = (1994..2016).to_a
 
-
-
-  # code!
   erb :years, layout: :main
 end
 
 get '/states' do
-  # code!
+
+  @states = ["Pennsylvania", "Maine", "California", "New Jersey", "Texas", "Oregon"]
+  @states.sort
+  @states.sort!
+
   erb :states, layout: :main
 end

@@ -4,7 +4,23 @@
 <p>I have visited the following states: </p>
 
   <ul>
+    <!-- jarp: You need to use <%= %> to output %> Without the equals sign, output is suppressed.
+        Make sure you view source in the browser to make sure the HTML is what you are expecting
+    -->
+
+    <!-- current html output is
+
+    <ul>
+    <li id="">California</li>
+    <li id="">Maine</li>
+    <li id="">New Jersey</li>
+    <li id="">Oregon</li>
+    <li id="">Pennsylvania</li>
+    <li id="">Texas</li>
+</ul>
+
+-->
     <% @states.each do | state | %>
-      <li id="<% @states.index(state) %>"><%= state %></li>
+      <li id="<%= @states.index(state) %>"><%= state %></li>
     <% end %>
   </ul>
